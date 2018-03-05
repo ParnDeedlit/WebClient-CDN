@@ -1,0 +1,45 @@
+"use strict";
+var fs = require('fs');
+
+var util = require('util');
+var express = require('express');
+var bodyParser = require('body-parser');
+var multer = require('multer'); // v1.0.5
+var upload = multer(); // for parsing multipart/form-data
+var app = express();
+
+function corsMiddleware(req, res, next) {
+    res.set('Access-Control-Allow-Origin', '*');
+    next();
+}
+
+function errCallback(err) {
+    if (err) {
+        console.log(err.message);
+    }
+}
+
+function fsExistsSync(path) {
+    try{
+        fs.accessSync(path,fs.F_OK);
+    }catch(e){
+        return false;
+    }
+    return true;
+}
+
+app.use(corsMiddleware);
+app.use(bodyParser.json({limit: '100mb'})); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+app.use('/', express.static('./'));
+app.use('/cdn', express.static('./cdn'));
+app.use('/data', express.static('./data'));
+app.get('/', function (req, res) {
+ 	res.redirect('/');
+});
+
+
+app.listen(8888, function () {
+    console.log('Server listening on port 8888!');
+});
