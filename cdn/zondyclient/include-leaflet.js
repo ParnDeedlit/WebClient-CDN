@@ -49,12 +49,12 @@
     }
 
     if(onInternetMode){
-      httpUrl = "http://182.61.52.190:8899";//"http://www.smaryun.com";
+      httpUrl = "http://182.61.52.190:8800";//"http://www.smaryun.com";
     }else{
       httpUrl = "http://" + ip + ":" + socket + "";
     }
 
-    if (!inArray(includes, 'leaflet')) {
+    if (!inArray(excludes, 'leaflet')) {
       inputCSS(httpUrl + "/cdn/leaflet/leaflet.css");
       inputScript(httpUrl + "/cdn/leaflet/leaflet.js");
     }
@@ -112,5 +112,5 @@
 
   load();
   window.isLocal = false;
-  window.server = document.location.toString().match(/file:\/\//) ? "http://localhost:8888" : 'http://' + document.location.host;
+  window.server = document.location.toString().match(/file:\/\//) ? "http://localhost:8800" : 'http://' + document.location.host;
 })();
