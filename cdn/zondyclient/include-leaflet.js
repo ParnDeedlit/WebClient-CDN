@@ -87,6 +87,9 @@
     if (inArray(includes, 'heater')) {
        inputScript(httpUrl + "/cdn/leaflet-plugins/Leaflet.heat/dist/leaflet-heat.js");
     }
+    if (inArray(includes, 'elasticsearch')) {
+       inputScript(httpUrl + "/cdn/elasticsearch/13.0.1/elasticsearch.min.js");
+    }
     // if (inArray(includes, 'label')) {
     //   /*
     //      @ info - this function is conflit to cluster, so if you want to use this
