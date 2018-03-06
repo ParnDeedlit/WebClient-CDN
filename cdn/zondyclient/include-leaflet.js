@@ -88,7 +88,7 @@
        inputScript(httpUrl + "/cdn/leaflet-plugins/Leaflet.heat/dist/leaflet-heat.js");
     }
     if (inArray(includes, 'elasticsearch')) {
-       inputScript(httpUrl + "/cdn/elasticsearch/13.0.1/elasticsearch.min.js");
+       inputScript(httpUrl + "/cdn/elasticsearch/14.1.0/elasticsearch.min.js");
     }
     // if (inArray(includes, 'label')) {
     //   /*
