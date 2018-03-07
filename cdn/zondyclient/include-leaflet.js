@@ -72,9 +72,9 @@
     // }
     if (inArray(includes, 'cluster')) {
         //https://unpkg.com/leaflet.markercluster@1.3.0/dist/
-        inputCSS(httpUrl + "/cdn/leaflet plugins/Leaflet.markercluster-1.3.0/MarkerCluster.css");
-        inputCSS(httpUrl + "/cdn/leaflet plugins/Leaflet.markercluster-1.3.0/MarkerCluster.Default.css");
-        inputScript(httpUrl + "/cdn/leaflet plugins/Leaflet.markercluster-1.3.0/leaflet.markercluster.js");
+        inputCSS(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/MarkerCluster.css");
+        inputCSS(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/MarkerCluster.Default.css");
+        inputScript(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/leaflet.markercluster.js");
     }
     // if (inArray(includes, 'marker')) {
     //    inputCSS("http://" + ip + ":" + socket + "/cdn/leaflet plugins/font-awesome.css");
