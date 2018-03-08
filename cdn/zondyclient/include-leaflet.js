@@ -93,6 +93,9 @@
     if (inArray(includes, 'ant-path')) {
        inputScript(httpUrl + "/cdn/leaflet-plugins/leaflet-ant-path/dist/leaflet-ant-path.js");
     }
+    if (inArray(includes, 'migrate')) {
+       inputScript(httpUrl + "/cdn/leaflet-plugins/leaflet.migrationLayer/dist/leaflet.migrationLayer.js");
+    }
     if (inArray(includes, 'elasticsearch')) {
        inputScript(httpUrl + "/cdn/elasticsearch/14.1.0/elasticsearch.min.js");
     }
