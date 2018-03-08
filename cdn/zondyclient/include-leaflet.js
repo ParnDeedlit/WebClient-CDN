@@ -46,7 +46,7 @@
       onInternetMode = false;//区域网模式
     }else{//互联网模式
       onInternetMode = true;
-    }
+    }m
 
     if(onInternetMode){
       httpUrl = "http://182.61.52.190:8800";//"http://www.smaryun.com";
@@ -70,12 +70,12 @@
     // if (inArray(includes, 'echarts')) {
     //    inputScript("http://" + ip + ":" + socket + "/cdn/echarts/echarts.js");
     // }
-    if (inArray(includes, 'cluster')) {
-        //https://unpkg.com/leaflet.markercluster@1.3.0/dist/
-        inputCSS(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/MarkerCluster.css");
-        inputCSS(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/MarkerCluster.Default.css");
-        inputScript(httpUrl + "/cdn/leaflet-plugins/Leaflet.markercluster-1.3.0/dist/leaflet.markercluster.js");
-    }
+    // if (inArray(includes, 'cluster')) {
+    //    inputCSS("http://" + ip + ":" + socket + "/cdn/leaflet plugins/MarkerCluster.css");
+    //    inputCSS("http://" + ip + ":" + socket + "/cdn/leaflet plugins/MarkerCluster.Default.css");
+    //    inputScript("http://" + ip + ":" + socket + "/cdn/leaflet plugins/leaflet.markercluster-src.js");
+    //    inputScript("http://" + ip + ":" + socket + "/cdn/leaflet plugins/leaflet-markercluster.placementstrategies.js");
+    // }
     // if (inArray(includes, 'marker')) {
     //    inputCSS("http://" + ip + ":" + socket + "/cdn/leaflet plugins/font-awesome.css");
     //    inputCSS("http://" + ip + ":" + socket + "/cdn/leaflet plugins/leaflet.awesome-markers.css");
@@ -86,6 +86,9 @@
     // }
     if (inArray(includes, 'heater')) {
        inputScript(httpUrl + "/cdn/leaflet-plugins/Leaflet.heat/dist/leaflet-heat.js");
+    }
+    if (inArray(includes, 'animate-marker')) {
+       inputScript(httpUrl + "/cdn/leaflet-plugins/leaflet.AnimatedMarker/src/AnimatedMarker.js");
     }
     if (inArray(includes, 'elasticsearch')) {
        inputScript(httpUrl + "/cdn/elasticsearch/14.1.0/elasticsearch.min.js");
