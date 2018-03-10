@@ -141,5 +141,5 @@ function decodeGeoHashToPolygon(geohash) {
   var bottom_right = [lon[1], lat[0]];
 	var bottom_left = [lon[0], lat[0]];
 
-	return [top_left, top_right, bottom_right, bottom_left, top_left];
+	return [[top_left, top_right, bottom_right, bottom_left, top_left]];
 }
