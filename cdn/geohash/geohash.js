@@ -110,3 +110,36 @@ function encodeGeoHash(latitude, longitude) {
 	}
 	return geohash;
 }
+
+function decodeGeoHashToPolygon(geohash) {
+	var is_even = 1;
+	var lat = []; var lon = [];
+	lat[0] = -90.0;  lat[1] = 90.0;
+	lon[0] = -180.0; lon[1] = 180.0;
+	lat_err = 90.0;  lon_err = 180.0;
+
+	for (i=0; i<geohash.length; i++) {
+		c = geohash[i];
+		cd = BASE32.indexOf(c);
+		for (j=0; j<5; j++) {
+			mask = BITS[j];
+			if (is_even) {
+				lon_err /= 2;
+				refine_interval(lon, cd, mask);
+			} else {
+				lat_err /= 2;
+				refine_interval(lat, cd, mask);
+			}
+			is_even = !is_even;
+		}
+	}
+	lat[2] = (lat[0] + lat[1])/2;
+	lon[2] = (lon[0] + lon[1])/2;
+
+	var top_left = [lon[0], lat[1]];
+	var top_right = [lon[1], lat[1]];
+  var bottom_right = [lon[1], lat[0]];
+	var bottom_left = [lon[0], lat[0]];
+
+	return [top_left, top_right, bottom_right, bottom_left, top_left];
+}
