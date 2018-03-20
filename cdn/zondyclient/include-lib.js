@@ -75,6 +75,9 @@
     if (inArray(includes, 'shapefile')) {
       inputScript(httpUrl + "/cdn/shapefile/shapefile.js");
     }
+    if (inArray(includes, 'turf')) {
+      inputScript(httpUrl + "/cdn/turf/turf.min.js");
+    }
 
 
     if (inArray(includes, 'proj4')) {
