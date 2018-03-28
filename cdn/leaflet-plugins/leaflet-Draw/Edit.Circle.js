@@ -5,7 +5,6 @@ L.Edit = L.Edit || {};
  * @inherits L.Edit.CircleMarker
  */
 L.Edit.Circle = L.Edit.CircleMarker.extend({
-
 	_createResizeMarker: function () {
 		var center = this._shape.getLatLng(),
 			resizemarkerPoint = this._getResizeMarkerPoint(center);
