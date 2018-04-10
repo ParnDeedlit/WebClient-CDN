@@ -55,9 +55,9 @@
       httpUrl = "http://" + ip + ":" + socket + "";
     }
 
-    if (!inArray(excludes, 'mapboxgl')) {
-      inputCSS(httpUrl + "/cdn/mapboxgl/mapbox-gl.css");
-      inputScript(httpUrl + "/cdn/mapboxgl/mapbox-gl.js");
+    if (!inArray(excludes, 'cesium')) {
+      inputCSS(httpUrl + "/cdn/cesium/widgets.css");
+      inputScript(httpUrl + "/cdn/cesium/Cesium.js");
     }
     // if (!inArray(includes, 'wmts')) {
     //    inputScript("http://" + ip + ":" + socket + "/cdn/leaflet plugins/leaflet-tilelayer-wmts.js");
