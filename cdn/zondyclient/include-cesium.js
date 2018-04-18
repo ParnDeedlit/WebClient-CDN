@@ -75,7 +75,7 @@
       inputScript(httpUrl + "/cdn/shapefile/shapefile.js");
     }
     if (inArray(includes, 'turf')) {
-      inputScript("http://" + ip + ":" + socket + "/cdn/turf/turf.min.js");
+      inputScript(httpUrl + "/cdn/turf/turf.min.js");
     }
     // if (inArray(includes, 'mapv')) {
     //    inputScript("http://" + ip + ":" + socket + "/cdn/mapv/mapv.min.js");
