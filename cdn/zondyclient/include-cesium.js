@@ -56,7 +56,7 @@
     }
 
     if (!inArray(excludes, 'cesium')) {
-      inputCSS(httpUrl + "/cdn/cesium/widgets.css");
+      inputCSS(httpUrl + "/cdn/cesium/Widgets/widgets.css");
       inputScript(httpUrl + "/cdn/cesium/Cesium.js");
     }
     // if (!inArray(includes, 'wmts')) {
